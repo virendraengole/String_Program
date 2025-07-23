@@ -1,4 +1,4 @@
-
+//second character that appears exactly once
 import java.util.*;
 public class Test4
 {
