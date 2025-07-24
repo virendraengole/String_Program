@@ -7,7 +7,7 @@ public class Test5
 	public static void main(String[] args) {
 		System.out.println("Please Enter String");
 		Scanner sc = new Scanner(System.in);
-	//	String s = 	"aabcccccaaa";
+	 //withot java 8
 	    String s = sc.nextLine();
 		StringBuilder compressed = new StringBuilder();
 		s = s.toLowerCase().replaceAll(" ", "").trim();
@@ -30,7 +30,21 @@ public class Test5
         
         compressed.append(currentChar).append(count);
         System.out.println(compressed);
-        
+        System.out.println();
+        //with java 8
+	    int count = 1;	
+		for(int i = 1; i < s.length(); i++) {
+		    if(s.charAt(i) == s.charAt(i-1)) {
+		        count++;
+		    } else {
+		        compressed.append(s.charAt(i-1)).append(count);
+		        count = 1;
+		    }
+		}
+		
+        compressed.append(s.charAt(s.length()-1)).append(count);
+
+		System.out.println(compressed);
 	    	
 		
 		
